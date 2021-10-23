@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/shade"
+    tools:context=".PayPage">
+    <RelativeLayout
+        android:background="@color/backPage"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Pay Portal"
+            android:textColor="@color/shade"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_below="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/backPage"
+        android:padding="20dp"
+        >
+        <TextView
+            android:id="@+id/labelTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Table Number"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/shade"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:id="@+id/tableNumber"
+            android:layout_below="@+id/labelTxt"
+            android:layout_centerHorizontal="true"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back1"
+            android:hint="eg:-5"
+            android:layout_marginTop="20dp"
+            android:maxLength="1"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:textColor="@color/Blue"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:id="@+id/payOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableNumber"
+            android:layout_marginTop="20dp"
+            android:text="Pay Online"
+            android:layout_alignParentLeft="true"/>
+        <Button
+            android:id="@+id/payCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableNumber"
+            android:layout_marginTop="20dp"
+            android:text="Pay Cash"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
